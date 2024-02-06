@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ weather_data.city }} Weather</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .weather-icon {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>{{ weather_data.city }} Weather</h2>
+        <p>Temperature: {{ weather_data.temperature }} K</p>
+        <p>Description: {{ weather_data.description }}</p>
+        <img src="http://openweathermap.org/img/wn/{{ weather_data.icon }}.png" alt="Weather Icon" class="weather-icon">
+        <a href="/" class="btn btn-primary">Back to Home</a>
+    </div>
+</body>
+</html>
