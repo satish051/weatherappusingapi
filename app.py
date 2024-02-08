@@ -9,7 +9,7 @@ API_KEY = "7f1ac843120588d2efe796546a4f2d22"
 @app.route('/')
 def index():
     return render_template('index.html')
-
+                    
 @app.route('/weather', methods=['POST'])
 def weather():
     city = request.form['city']
@@ -35,3 +35,4 @@ def weather():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
