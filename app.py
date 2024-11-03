@@ -16,7 +16,7 @@ def weather():
     if not city:
         return render_template('index.html', error='Please enter a city name.')
 
-    # Fetch weather data from OpenWeatherMap API
+    # Fetched weather data from OpenWeatherMap API
     url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}'
     response = requests.get(url)
     data = response.json()
@@ -35,3 +35,4 @@ def weather():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
